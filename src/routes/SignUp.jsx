@@ -82,7 +82,7 @@ const SignUp = () => {
             <span>Add an avatar</span>
           </label>
           <button disabled={loading}>Sign up</button>
-          {loading && "Uploading and compressing the image please wait..."}
+          {loading && "Uploading the image please wait..."}
           {err && <span>Something went wrong</span>}
         </form>
         <p>
