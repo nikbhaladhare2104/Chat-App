@@ -1,0 +1,357 @@
+
+:root {
+  font-family: "Inter", sans-serif;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: var(--dark-1);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --Orange: hsl(25, 97%, 53%);
+  --primary-500: #877EFF;
+  --primary-600: #5D5FEF;
+  --secondary-500: #FFB620;
+  --off-white: #D0DFFF;
+  --red: #FF5A5A;
+  --dark-1: #000000;
+  --dark-2: #09090A;
+  --dark-3: #101012;
+  --dark-4: #1F1F22;
+  --light-1: #FFFFFF;
+  --light-2: #EFEFEF;
+  --light-3: #7878A3;
+  --light-4: #5C5C7B;
+
+  --White: hsl(0, 0%, 100%);
+  --Light-Grey: hsl(217, 12%, 63%);
+  --Dark-Blue: hsl(213, 19%, 18%);
+  --Very-Dark-Blue: hsl(216, 12%, 8%);
+  --Card-blue: hsl(216, 22%, 14%);
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+p, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+body {
+  margin: 0;
+  color: var(--White);
+}
+
+/* SIGN UP  */
+.formContainer {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.formWrapper {
+  background-color: var(--dark-3);
+  padding: 20px 60px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+.logo {
+  color: var(--primary-500);
+  font-weight: bold;
+  font-size: 24px;
+}
+.title {
+  color: var(--primary-500);
+  font-size: 12px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+input {
+  padding: 15px;
+  border: none;
+  width: 300px;
+  border-radius: 10px;
+  border-bottom: 1px solid var(--primary-500);
+  background-color: var(--dark-4);
+  color: white;
+
+  &::placeholder {
+    color: var(--Light-Grey);
+  }
+}
+form > button {
+  background-color: var(--primary-500);
+  color: white;
+  padding: 13px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+}
+form > label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #8da4f1;
+  font-size: 12px;
+  cursor: pointer;
+}
+form > label > img {
+  width: 32px;
+}
+
+.formWrapper > p {
+  color: var(--Light-Grey);
+  font-size: 14px;
+  margin-top: 10px;
+  margin-right: 5px;
+}
+.formWrapper > p .link {
+  text-decoration: none;
+  color: var(--primary-500);
+}
+
+
+ /* HOME  */
+ .home {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ }
+ .container {
+   border: 1px solid var(--dark-4);
+   border-radius: 10px;
+   width: 65%;
+   height: 80%;
+   display: flex;
+   overflow: hidden;
+
+   /* @include tablet {
+     width: 90%;
+   } */
+ }
+
+
+ /* SIDEBAR */
+.sidebar {
+  flex: 1;
+  background-color: var(--dark-3);
+  position: relative;
+}
+
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  align-items: center;
+  background-color: var(--dark-1);
+  height: 50px;
+  padding: 10px;
+  justify-content: space-between;
+  color: #ddddf7;
+}
+ .user {
+   display: flex;
+   gap: 10px;
+ }
+ .user > img {
+   background-color: #ddddf7;
+   height: 24px;
+   width: 24px;
+   border-radius: 50%;
+   object-fit: cover;
+ }
+ .user > span {
+   font-size: 14px;
+ }
+ .user >   button {
+    background-color: var(--primary-500);
+    border-radius: 5px;
+    color: white;
+    font-size: 10px;
+    border: none;
+    cursor: pointer;
+
+    /* @include tablet {
+      position: absolute;
+      bottom: 10px;
+    } */
+}
+
+
+/* SEARCH */
+.search {
+  border-bottom: 1px solid var(--dark-4);
+}
+.searchForm {
+  padding: 10px;
+}
+.searchForm > input {
+  background-color: var(--dark-4);
+  border: none;
+  color: white;
+  outline: none;
+}
+.searchForm > input::placeholder {
+  color: var(--Light-Grey);
+}
+.userChat {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  color: white;
+  cursor: pointer;
+}
+.userChat:hover {
+  background-color: var(--dark-4);
+}
+.userChat > img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.userChatInfo > span {
+  font-size: 18px;
+  font-weight: 500;
+}
+.userChatInfo > p {
+  font-size: 14px;
+  color: var(--Light-Grey);
+}
+
+
+/* CHAT PANEL */
+.chat {
+  flex: 2;
+  background-color: var(--dark-2);
+}
+.chatInfo {
+  height: 50px;
+  background-color: var(--dark-1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  color: var(--Light-Grey);
+ }
+
+ /* MESSAGES */
+.messages {
+  background-color: var(--dark-2);
+  padding: 10px;
+  height: calc(100% - 160px);
+  overflow: scroll;
+;
+}
+.message {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+.messageInfo {
+  display: flex;
+  flex-direction: column;
+  color: var(--Light-Grey);
+  font-weight: 300;
+  font-size: 12px;
+}
+.messageInfo > img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+
+}
+
+.messageContent {
+  max-width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.messageContent > div {
+  position: relative;
+}
+.messageContent > div > img  {
+  position: absolute;
+  bottom: 1px;
+  right: 5px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.messageContent > div > p {
+  background-color: var(--dark-4);
+  padding: 10px 20px;
+  border-radius: 0px 10px 10px 10px;
+  max-width: max-content;
+}
+.messageContent > img {
+  width: 50%;
+}
+
+.message.owner {
+  flex-direction: row-reverse;
+}
+.message.owner > .messageContent {
+  align-items: flex-end;
+}
+.message.owner > .messageContent > div > p {
+  background-color: var(--primary-500);
+  color: white;
+  border-radius: 10px 0px 10px 10px;
+}
+
+/* INPUT */
+.input {
+  height: 50px;
+  background-color: var(--dark-1);
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2rem;
+
+}
+.input > input {
+  width: 100%;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 18px;
+
+  &::placeholder {
+    color: var(--Light-Grey);
+  }
+}
+
+.send {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.send > img, 
+.send > label > img {
+  width: 24px;
+  height: 24px;
+  cursor: pointer; 
+}
+.send > button {
+  border: none;
+  border-radius: 10px;
+  padding: 5px 10px;
+  color: white;
+  background-color: var(--primary-500);
+  cursor: pointer;
+}
